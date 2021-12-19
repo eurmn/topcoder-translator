@@ -16,14 +16,11 @@
   translatePTtoEN(sourceText).then(result => translatedText = result);
 </script>
 
-<svelte:head>
-  <title>Topcoder Translator</title>
-</svelte:head>
 <main>
   <h1 class="title">topcoder translator</h1>
   <div class="card">
     <div class="labelInput">
-      <b style="display: block;">Input (Portuguese)</b>
+      <span style="display: block;">Input (Portuguese)</span>
       <input type="text" bind:value={sourceText} on:input={ () => {
         if (timeoutID) clearTimeout(timeoutID);
         timeoutID = setTimeout(() => {
@@ -50,9 +47,9 @@
         <span>{letter}</span>
       {/each}
     </div>
-    <b style="display: block; margin-bottom: 2em;">
+    <span style="display: block; margin-bottom: 2em;">
       Output (English)
-    </b>
+    </span>
   </div>
 </div>
 </main>
@@ -68,9 +65,6 @@
     background: rgb(46, 0, 73);
     padding: 0;
     margin: 0;
-  }
-  b {
-    font-family: 'Titillium Web', sans-serif;
   }
   input {
     margin-bottom: 1em;
