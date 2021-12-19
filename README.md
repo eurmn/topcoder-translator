@@ -3,7 +3,7 @@
 ## How to run
 
 ```sh
-yarn dev
+yarn build && yarn start
 ```
 
 then, the app will be available at localhost, port 5000.
